@@ -1,9 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:meals_app/screens/categories_screen.dart';
 import 'package:meals_app/screens/tabs_screen.dart';
 
 final theme = ThemeData(
@@ -16,7 +15,7 @@ final theme = ThemeData(
 );
 
 void main() {
-  runApp(const App());
+  runApp(ProviderScope(child: App()));
 }
 
 class App extends StatelessWidget {
